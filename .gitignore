@@ -1,3 +1,6 @@
 **/__pycache__/*
 **/.idea/*
+**.d3v.**
+**.d3v
+
 /db.sqlite3
