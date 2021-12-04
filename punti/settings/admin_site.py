@@ -15,18 +15,18 @@ admin.AdminSite.index_title = gettext_lazy(
     '┏(-_-)┛┗(-_-﻿ )┓┗(-_-)┛┏(-_-)┓'
 )
 
-from punti.settings.api import api_version
+from punti.settings.api import API_VERSION
 
 CUSTOM_ADMIN_APPS = [
     {
-        'name': f'api v{api_version}',
+        'name': f'api v{API_VERSION}',
         'app_label': 'api',
-        'app_url': f'/api/v{api_version}',
+        'app_url': f'/api/v{API_VERSION}',
         'models': [
             {
                 'name': name,
-                'admin_url': f'/api/v{api_version}/{name.lower()}/',
-                'add_url': f'/api/v{api_version}/{name.lower()}/0/',
+                'admin_url': f'/api/v{API_VERSION}/{name.lower()}/',
+                'add_url': f'/api/v{API_VERSION}/{name.lower()}/0/',
                 'view_only': True
 
             } if name else {'name': ''}
