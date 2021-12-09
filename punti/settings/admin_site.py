@@ -4,14 +4,14 @@ from django.utils.translation import gettext_lazy
 
 admin.AdminSite.site_header = gettext_lazy(
     ' _ _ _̴ı̴̴̡̡̡ ̡͌l̡̡̡ ̡͌l̡*̡̡ ̴̡ı̴̴̡ ̡̡͡| ̲▫̲͡ ̲̲͡▫̲̲͡͡ ̲|̡̡̡ ̡ ̴̡ı̴̡̡ ̡͌l̡̡̡̡._ _ _'
-    '٩(   ͡๏  ̯͡๏)۶_( PUNTI )_ᕕ( ᐛ )ᕗ'
+    '٩(   ͡๏  ̯͡๏)۶_( BACK TO 90\'s )_ᕕ( ᐛ )ᕗ'
     ' _ _ _̴ı̴̴̡̡̡ ̡͌l̡̡̡ ̡͌l̡*̡̡ ̴̡ı̴̴̡ ̡̡͡| ̲▫̲͡ ̲̲͡▫̲̲͡͡ ̲|̡̡̡ ̡ ̴̡ı̴̡̡ ̡͌l̡̡̡̡._ _ _'
     
     ' _ _ ┻━┻︵  \(°□°)/ ︵ ┻━┻ '
 )
 admin.AdminSite.index_title = gettext_lazy(
     '┏(-_-)┛┗(-_-﻿ )┓┗(-_-)┛┏(-_-)┓'
-    "  BACK TO 90's  "
+    "  PUNTI  "
     '┏(-_-)┛┗(-_-﻿ )┓┗(-_-)┛┏(-_-)┓'
 )
 
@@ -47,13 +47,13 @@ ADMIN_ORDERING = {
     'update_apps': {'entities': {'app_url': '/admin/entities/entity'}},
 
     'custom_apps': CUSTOM_ADMIN_APPS,
-    'apps_order': ['auth', '', 'entities', 'scheduler', '', 'api v1', ''],
+    'apps_order': ['auth', 'entities', 'scheduler', 'api v1', ''],
 
-    'exclude_apps': [],
+    'exclude_apps': ['sites'],
 
     'exclude_models': {'entities': ['Entities']},
 
-    'models_order': {'entities': ['', 'Punti', *['' for i in range(1*2 + 1)]]},
+    'models_order': {'entities': ['', 'Punti', '']},  # *['' for i in range(1*2 + 1)]]},
 
     'update_models': {
         #'entities': {'Entities': {'view_only': True}}

@@ -9,10 +9,16 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEBUG = True
+SITE_ID = 1
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
+gettext = lambda s: s
 LANGUAGE_CODE = 'en-us'
+LANGUAGES = [
+    ('en-us', gettext('English')),
+]
+
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
@@ -24,7 +30,7 @@ from .apps import *
 from .middleware import *
 from .environments import *
 from .common import *
-from .dabatases import *
+from .databases import *
 from .admin_site import *
 from .templates import *
 
