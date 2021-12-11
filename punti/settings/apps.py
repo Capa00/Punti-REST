@@ -13,9 +13,8 @@ CMS_APPS = [
     'cms',  # django CMS itself
     #'mptt',  # utilities for implementing a tree
     'menus',  # helper for model independent hierarchical website navigation
-    #'south',  # Only needed for Django < 1.7
     'sekizai',  # for javascript and css management
-    'treebeard',  # for javascript and css management
+    'treebeard',
 
     # 'djangocms_file',
     # 'djangocms_flash',
@@ -43,8 +42,7 @@ INSTALLED_APPS = [
 
     *MY_APPS,
 
+    # Third party apps
     'rest_framework',
     'rangefilter',
-    'django_json_widget',
-
 ]
